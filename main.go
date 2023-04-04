@@ -1,28 +1,161 @@
 package main
 
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
 func main() {
 
 	// 1. Escreva um programa que receba uma string e converta todas as letras minúsculas para maiúsculas. Informe ao usuário o resultado.
 
-	/*scanner := bufio.NewScanner(os.Stdin)
+	scanner := bufio.NewScanner(os.Stdin)
 
 	fmt.Print("Usuário, digite um texto, por favor: ")
 	scanner.Scan()
 	str := scanner.Text()
 
-	fmt.Println(strings.ToUpper(str))*/
+	fmt.Println(strings.ToUpper(str))
 
 	// 2. Escreva um programa que receba uma string e remova todos os espaços em branco. Informe ao usuário o resultado.
 
-	// 3. Escreva um programa que receba uma string e substitua todas as ocorrências desse caractere na string por outro caractere especificado pelo usuário. Informe ao usuário o resultado.
+	scanner := bufio.NewScanner(os.Stdin)
+
+	fmt.Print("Usuário, digite um texto, por favor: ")
+	scanner.Scan()
+	str0 := scanner.Text()
+
+	str1 := strings.ReplaceAll(str0, " ", "")
+
+	fmt.Println(str1)
+
+	// 3. Escreva um programa que receba uma string e um caractere e substitua todas as ocorrências desse caractere na string por outro caractere também especificado pelo usuário. Informe ao usuário o resultado.
+
+	scanner := bufio.NewScanner(os.Stdin)
+
+	fmt.Print("Usuário, digite um texto, por favor: ")
+	scanner.Scan()
+	str0 := scanner.Text()
+
+	fmt.Print("Usuário, digite um caractere que quer substituir, por favor: ")
+	scanner.Scan()
+	r := scanner.Text()
+
+	fmt.Print("Usuário, digite um caractere que substituirá o caractere escolhido anteriormente, por favor: ")
+	scanner.Scan()
+	c := scanner.Text()
+
+	str1 := strings.ReplaceAll(str0, r, c)
+
+	fmt.Println(str1)
 
 	// 4. Solicite ao usuário duas strings e informe se elas são iguais ou diferentes.
 
+	scanner := bufio.NewScanner(os.Stdin)
+
+	fmt.Print("Usuário, digite um texto, por favor: ")
+	scanner.Scan()
+	str0 := scanner.Text()
+
+	fmt.Print("Usuário, digite um outro texto, por favor: ")
+	scanner.Scan()
+	str1 := scanner.Text()
+
+	if str0 == str1 {
+
+		fmt.Print("Os textos são iguais.")
+
+	} else {
+
+		fmt.Print("Os textos são diferentes.")
+
+	}
+
 	// 5. Escreva um programa que receba uma string e verifique se ela é um número válido em ponto flutuante. Informe ao usuário se é ou não.
+
+	scanner := bufio.NewScanner(os.Stdin)
+
+	fmt.Print("Usuário, digite um texto, por favor: ")
+	scanner.Scan()
+	str := scanner.Text()
+
+	if strings.Contains(str, ".") {
+
+		fmt.Print("O texto é um número válido em ponto flutuante.")
+
+	} else {
+
+		fmt.Print("O texto não é um número válido em ponto flutuante.")
+
+	}
 
 	// 6. Escreva um programa que receba uma string e conte quantas palavras ela contém. Informe ao usuário o resultado.
 
+	scanner := bufio.NewScanner(os.Stdin)
+
+	fmt.Print("Usuário, digite um texto, por favor: ")
+	scanner.Scan()
+	str0 := scanner.Text()
+
+	str1 := strings.Count(str0, " ") + 1
+
+	fmt.Printf("O texto tem %d palavra(s).", str1)
+
 	// 7. Solicite ao usuário uma string e informe se ela contém pelo menos um número.
+
+	scanner := bufio.NewScanner(os.Stdin)
+
+	fmt.Print("Usuário, digite um texto, por favor: ")
+	scanner.Scan()
+	str := scanner.Text()
+
+	if strings.Contains(str, "0") {
+
+		fmt.Print("O texto contém pelo menos um número.")
+
+	} else if strings.Contains(str, "1") {
+
+		fmt.Print("O texto contém pelo menos um número.")
+
+	} else if strings.Contains(str, "2") {
+
+		fmt.Print("O texto contém pelo menos um número.")
+
+	} else if strings.Contains(str, "3") {
+
+		fmt.Print("O texto contém pelo menos um número.")
+
+	} else if strings.Contains(str, "4") {
+
+		fmt.Print("O texto contém pelo menos um número.")
+
+	} else if strings.Contains(str, "5") {
+
+		fmt.Print("O texto contém pelo menos um número.")
+
+	} else if strings.Contains(str, "6") {
+
+		fmt.Print("O texto contém pelo menos um número.")
+
+	} else if strings.Contains(str, "7") {
+
+		fmt.Print("O texto contém pelo menos um número.")
+
+	} else if strings.Contains(str, "8") {
+
+		fmt.Print("O texto contém pelo menos um número.")
+
+	} else if strings.Contains(str, "9") {
+
+		fmt.Print("O texto contém pelo menos um número.")
+
+	} else {
+
+		fmt.Print("O texto não contém número(s).")
+
+	}
 
 	// 8. Escreva um programa que receba uma string e inverta a ordem dos caracteres. Informe ao usuário o resultado.
 
