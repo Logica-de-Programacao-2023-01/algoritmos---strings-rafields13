@@ -1,17 +1,10 @@
 package main
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-	"strings"
-)
-
 func main() {
 
 	// 1. Escreva um programa que receba uma string e converta todas as letras minúsculas para maiúsculas. Informe ao usuário o resultado.
 
-	scanner := bufio.NewScanner(os.Stdin)
+	/*scanner := bufio.NewScanner(os.Stdin)
 
 	fmt.Print("Usuário, digite um texto, por favor: ")
 	scanner.Scan()
@@ -159,11 +152,103 @@ func main() {
 
 	// 8. Escreva um programa que receba uma string e inverta a ordem dos caracteres. Informe ao usuário o resultado.
 
+	func main () {
+
+		scanner := bufio.NewScanner(os.Stdin)
+
+		fmt.Print("Usuário, digite um texto, por favor: ")
+		scanner.Scan()
+		str := scanner.Text()
+		reverseStr := reverse(str)
+		fmt.Println(reverseStr)
+	}
+
+	func reverse(s string) string{
+		runes := []rune(s)
+		for i, j := 0, len(runes)-1; i < len(runes)/2; i, j = i+1, j-1{
+		runes[i], runes[j] = runes[j], runes[i]
+	}
+		return string(runes)
+	}
+	// Esse código deve ser colocado a funcão main para iniciar uma string global e uma função "reverse" local puxando tudo.
+
 	// 9. Solicite ao usuário uma string e substitua todas as ocorrências de uma letra por outra informada pelo usuário.
+
+	scanner := bufio.NewScanner(os.Stdin)
+
+	fmt.Print("Usuário, digite um texto, por favor: ")
+	scanner.Scan()
+	str0 := scanner.Text()
+
+	fmt.Print("Usuário, digite um caractere que quer substituir, por favor: ")
+	scanner.Scan()
+	r := scanner.Text()
+
+	fmt.Print("Usuário, digite um caractere que substituirá o caractere escolhido anteriormente, por favor: ")
+	scanner.Scan()
+	c := scanner.Text()
+
+	str1 := strings.ReplaceAll(str0, r, c)
+
+	fmt.Println(str1)
 
 	// 10. Escreva um programa que receba duas strings e verifique se elas são anagramas. Informe ao usuário se são ou não.
 
+	scanner := bufio.NewScanner(os.Stdin)
+
+	fmt.Print("Usuário, digite um texto, por favor: ")
+	scanner.Scan()
+	str0 := scanner.Text()
+
+	fmt.Print("Usuário, digite um outro texto, por favor: ")
+	scanner.Scan()
+	str1 := scanner.Text()
+
+	str0 = strings.ToLower(strings.ReplaceAll(str0, " ", ""))
+	str1 = strings.ToLower(strings.ReplaceAll(str1, " ", ""))
+
+	if len(str0) != len(str1) {
+		fmt.Println("Não são anagramas.")
+		return
+	}
+
+	str0r := []rune(str0)
+	str1r := []rune(str1)
+
+	sort.Slice(str0r, func(i, j int) bool {
+		return str0r[i] < str0r[j]
+	})
+	sort.Slice(str1r, func(i, j int) bool {
+		return str1r[i] < str1r[j]
+	})
+
+	str0s := string(str0r)
+	str1s := string(str1r)
+
+	if str0s == str1s {
+		fmt.Println("São anagramas!")
+	} else {
+		fmt.Println("Não são anagramas.")
+	}
+
 	// 11. Escreva um programa que receba uma string e remova todas as vogais. Informe ao usuário o resultado.
+
+	scanner := bufio.NewScanner(os.Stdin)
+
+	fmt.Print("Usuário, digite um texto, por favor: ")
+	scanner.Scan()
+	str0 := scanner.Text()
+
+	vogais := map[string]bool{"a": true, "e": true, "i": true, "o": true, "u": true}
+
+	resultado := strings.Builder{}
+	for _, letra := range str0 {
+		if !vogais[strings.ToLower(string(letra))] {
+			resultado.WriteRune(letra)
+		}
+	}
+
+	fmt.Printf("Resultado: %s\n", resultado.String())*/
 
 	// 12. Escreva um programa que receba uma string e verifique se ela é um palíndromo. Informe ao usuário se é ou não.
 
