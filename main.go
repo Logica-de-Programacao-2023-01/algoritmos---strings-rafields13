@@ -573,7 +573,7 @@ package main
 
 				for i, r := range input {
 
-					if i == 0 { // se for a primeira letra da string, verifica se é maiúscula
+					if i == 0 {
 
 						if !unicode.IsUpper(r) {
 
@@ -587,11 +587,11 @@ package main
 
 					}
 
-				if unicode.IsSpace(r) { // se encontrar um espaço, conta uma nova palavra
+				if unicode.IsSpace(r) {
 
 					words++
 
-				} else if !unicode.IsLower(r) { // se encontrar uma letra maiúscula que não seja a primeira, não está em camelCase
+				} else if !unicode.IsLower(r) {
 
 					 fmt.Println("A string não está em camelCase.")
 
