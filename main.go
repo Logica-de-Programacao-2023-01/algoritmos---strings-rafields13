@@ -587,16 +587,17 @@ package main
 
 					}
 
-				if unicode.IsSpace(r) {
+					if unicode.IsSpace(r) {
 
-					words++
+						words++
 
-				} else if !unicode.IsLower(r) {
+					} else if !unicode.IsLower(r) {
 
-					 fmt.Println("A string não está em camelCase.")
+					 	 fmt.Println("A string não está em camelCase.")
 
-					 return
-				  }
+					 	return
+
+				  	  }
 
 				}
 
