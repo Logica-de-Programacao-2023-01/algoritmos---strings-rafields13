@@ -562,7 +562,7 @@ package main
 
 				}
 
-			// 20. Solicite ao usuário uma string e informe se ela é está em CamelCase e quantas palavras possui. CamelCase é quando a primeira letra de cada palavra é maiúscula, e as demais são minúsculas. Exemplo: "EstaStringEstáEmCamelCase".
+			// 20. Solicite ao usuário uma string e informe se ela é está em CamelCase e quantas palavras possui. camelCase é quando a primeira letra de cada palavra é maiúscula, e as demais são minúsculas. Exemplo: "estaStringEstáEmCamelCase".
 
 				var input string
 
