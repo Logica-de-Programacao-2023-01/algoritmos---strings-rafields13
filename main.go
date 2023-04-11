@@ -1,447 +1,647 @@
 package main
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-	"sort"
-	"strconv"
-	"strings"
-)
+	import (
 
-func main() {
+		"bufio"
+		"fmt"
+		"os"
+		"sort"
+		"strconv"
+		"strings"
+		"unicode"
 
-		// 1. Escreva um programa que receba uma string e converta todas as letras minúsculas para maiúsculas. Informe ao usuário o resultado.
+	)
 
-		scanner := bufio.NewScanner(os.Stdin)
+		func main() {
 
-		fmt.Print("Usuário, digite um texto, por favor: ")
-		scanner.Scan()
+			// 1. Escreva um programa que receba uma string e converta todas as letras minúsculas para maiúsculas. Informe ao usuário o resultado.
 
-		str := scanner.Text()
+				scanner := bufio.NewScanner(os.Stdin)
 
-		fmt.Println(strings.ToUpper(str))
+				fmt.Print("Usuário, digite um texto, por favor: ")
+				scanner.Scan()
 
-		// 2. Escreva um programa que receba uma string e remova todos os espaços em branco. Informe ao usuário o resultado.
+				str := scanner.Text()
 
-		scanner := bufio.NewScanner(os.Stdin)
+				fmt.Println(strings.ToUpper(str))
 
-		fmt.Print("Usuário, digite um texto, por favor: ")
-		scanner.Scan()
+			// 2. Escreva um programa que receba uma string e remova todos os espaços em branco. Informe ao usuário o resultado.
 
-		str0 := scanner.Text()
+				scanner := bufio.NewScanner(os.Stdin)
 
-		str1 := strings.ReplaceAll(str0, " ", "")
+				fmt.Print("Usuário, digite um texto, por favor: ")
+				scanner.Scan()
 
-		fmt.Println(str1)
+				str0 := scanner.Text()
 
-		// 3. Escreva um programa que receba uma string e um caractere e substitua todas as ocorrências desse caractere na string por outro caractere também especificado pelo usuário. Informe ao usuário o resultado.
+				str1 := strings.ReplaceAll(str0, " ", "")
 
-		scanner := bufio.NewScanner(os.Stdin)
+				fmt.Println(str1)
 
-		fmt.Print("Usuário, digite um texto, por favor: ")
-		scanner.Scan()
+			// 3. Escreva um programa que receba uma string e um caractere e substitua todas as ocorrências desse caractere na string por outro caractere também especificado pelo usuário. Informe ao usuário o resultado.
 
-		str0 := scanner.Text()
+				scanner := bufio.NewScanner(os.Stdin)
 
-		fmt.Print("Usuário, digite um caractere que quer substituir, por favor: ")
-		scanner.Scan()
+				fmt.Print("Usuário, digite um texto, por favor: ")
+				scanner.Scan()
 
-		r := scanner.Text()
+				str0 := scanner.Text()
 
-		fmt.Print("Usuário, digite um caractere que substituirá o caractere escolhido anteriormente, por favor: ")
-		scanner.Scan()
+				fmt.Print("Usuário, digite um caractere que quer substituir, por favor: ")
+				scanner.Scan()
 
-		c := scanner.Text()
+				r := scanner.Text()
 
-		str1 := strings.ReplaceAll(str0, r, c)
+				fmt.Print("Usuário, digite um caractere que substituirá o caractere escolhido anteriormente, por favor: ")
+				scanner.Scan()
 
-		fmt.Println(str1)
+				c := scanner.Text()
 
-		// 4. Solicite ao usuário duas strings e informe se elas são iguais ou diferentes.
+				str1 := strings.ReplaceAll(str0, r, c)
 
-		scanner := bufio.NewScanner(os.Stdin)
+				fmt.Println(str1)
 
-		fmt.Print("Usuário, digite um texto, por favor: ")
-		scanner.Scan()
+			// 4. Solicite ao usuário duas strings e informe se elas são iguais ou diferentes.
 
-		str0 := scanner.Text()
+				scanner := bufio.NewScanner(os.Stdin)
 
-		fmt.Print("Usuário, digite um outro texto, por favor: ")
-		scanner.Scan()
+				fmt.Print("Usuário, digite um texto, por favor: ")
+				scanner.Scan()
 
-		str1 := scanner.Text()
+				str0 := scanner.Text()
 
-		if str0 == str1 {
+				fmt.Print("Usuário, digite um outro texto, por favor: ")
+				scanner.Scan()
 
-			fmt.Print("Os textos são iguais.")
+				str1 := scanner.Text()
 
-		} else {
+				if str0 == str1 {
 
-			fmt.Print("Os textos são diferentes.")
+					fmt.Print("Os textos são iguais.")
 
-		}
+				} else {
 
-		// 5. Escreva um programa que receba uma string e verifique se ela é um número válido em ponto flutuante. Informe ao usuário se é ou não.
+				     fmt.Print("Os textos são diferentes.")
 
-		scanner := bufio.NewScanner(os.Stdin)
+				  }
 
-		fmt.Print("Usuário, digite um texto, por favor: ")
-		scanner.Scan()
+			// 5. Escreva um programa que receba uma string e verifique se ela é um número válido em ponto flutuante. Informe ao usuário se é ou não.
 
-		str := scanner.Text()
+				scanner := bufio.NewScanner(os.Stdin)
 
-		if strings.Contains(str, ".") {
+				fmt.Print("Usuário, digite um texto, por favor: ")
+				scanner.Scan()
 
-			fmt.Print("O texto é um número válido em ponto flutuante.")
+				str := scanner.Text()
 
-		} else {
+				if strings.Contains(str, ".") {
 
-			fmt.Print("O texto não é um número válido em ponto flutuante.")
+					fmt.Print("O texto é um número válido em ponto flutuante.")
 
-		}
+				} else {
 
-		// 6. Escreva um programa que receba uma string e conte quantas palavras ela contém. Informe ao usuário o resultado.
+					 fmt.Print("O texto não é um número válido em ponto flutuante.")
 
-		scanner := bufio.NewScanner(os.Stdin)
+				  }
 
-		fmt.Print("Usuário, digite um texto, por favor: ")
-		scanner.Scan()
+			// 6. Escreva um programa que receba uma string e conte quantas palavras ela contém. Informe ao usuário o resultado.
 
-		str0 := scanner.Text()
+				scanner := bufio.NewScanner(os.Stdin)
 
-		str1 := strings.Count(str0, " ") + 1
+				fmt.Print("Usuário, digite um texto, por favor: ")
+				scanner.Scan()
 
-		fmt.Printf("O texto tem %d palavra(s).", str1)
+				str0 := scanner.Text()
 
-		// 7. Solicite ao usuário uma string e informe se ela contém pelo menos um número.
+				str1 := strings.Count(str0, " ") + 1
 
-		scanner := bufio.NewScanner(os.Stdin)
+				fmt.Printf("O texto tem %d palavra(s).", str1)
 
-		fmt.Print("Usuário, digite um texto, por favor: ")
-		scanner.Scan()
+			// 7. Solicite ao usuário uma string e informe se ela contém pelo menos um número.
 
-		str := scanner.Text()
+				scanner := bufio.NewScanner(os.Stdin)
 
-		if strings.Contains(str, "0") {
+				fmt.Print("Usuário, digite um texto, por favor: ")
+				scanner.Scan()
 
-			fmt.Print("O texto contém pelo menos um número.")
+				str := scanner.Text()
 
-		} else if strings.Contains(str, "1") {
+				if strings.Contains(str, "0") {
 
-			fmt.Print("O texto contém pelo menos um número.")
+					fmt.Print("O texto contém pelo menos um número.")
 
-		} else if strings.Contains(str, "2") {
+				} else if strings.Contains(str, "1") {
 
-			fmt.Print("O texto contém pelo menos um número.")
+					  fmt.Print("O texto contém pelo menos um número.")
 
-		} else if strings.Contains(str, "3") {
+				  } else if strings.Contains(str, "2") {
 
-			fmt.Print("O texto contém pelo menos um número.")
+					   fmt.Print("O texto contém pelo menos um número.")
 
-		} else if strings.Contains(str, "4") {
+				    } else if strings.Contains(str, "3") {
 
-			fmt.Print("O texto contém pelo menos um número.")
+						fmt.Print("O texto contém pelo menos um número.")
 
-		} else if strings.Contains(str, "5") {
+					  } else if strings.Contains(str, "4") {
 
-			fmt.Print("O texto contém pelo menos um número.")
+						 fmt.Print("O texto contém pelo menos um número.")
 
-		} else if strings.Contains(str, "6") {
+						} else if strings.Contains(str, "5") {
 
-			fmt.Print("O texto contém pelo menos um número.")
+						  fmt.Print("O texto contém pelo menos um número.")
 
-		} else if strings.Contains(str, "7") {
+						  } else if strings.Contains(str, "6") {
 
-			fmt.Print("O texto contém pelo menos um número.")
+						   fmt.Print("O texto contém pelo menos um número.")
 
-		} else if strings.Contains(str, "8") {
+							} else if strings.Contains(str, "7") {
 
-			fmt.Print("O texto contém pelo menos um número.")
+							fmt.Print("O texto contém pelo menos um número.")
 
-		} else if strings.Contains(str, "9") {
+							  } else if strings.Contains(str, "8") {
 
-			fmt.Print("O texto contém pelo menos um número.")
+							 fmt.Print("O texto contém pelo menos um número.")
 
-		} else {
+								} else if strings.Contains(str, "9") {
 
-			fmt.Print("O texto não contém número(s).")
+							  fmt.Print("O texto contém pelo menos um número.")
 
-		}
+								  } else {
 
-		// 8. Escreva um programa que receba uma string e inverta a ordem dos caracteres. Informe ao usuário o resultado.
+							   fmt.Print("O texto não contém número(s).")
 
-		  func main() {
+									}
 
-		  	scanner := bufio.NewScanner(os.Stdin)
+			// 8. Escreva um programa que receba uma string e inverta a ordem dos caracteres. Informe ao usuário o resultado.
 
-		  	fmt.Print("Usuário, digite um texto, por favor: ")
-		  	scanner.Scan()
+				func main() {
 
-		  	str := scanner.Text()
+					scanner := bufio.NewScanner(os.Stdin)
 
-		  	rts := reverse(str)
+					fmt.Print("Usuário, digite um texto, por favor: ")
+					scanner.Scan()
 
-		  	fmt.Println(rts)
+					str := scanner.Text()
 
-		  }
+					rts := reverse(str)
 
-		  func reverse(s string) string {
+					fmt.Println(rts)
 
-		  	runes := []rune(s)
+				}
 
-		  	for i, j := 0, len(runes)-1; i < len(runes)/2; i, j = i+1, j-1 {
+				func reverse(s string) string {
 
-		  		runes[i], runes[j] = runes[j], runes[i]
+					runes := []rune(s)
 
-		  	}
+					for i, j := 0, len(runes)-1; i < len(runes)/2; i, j = i+1, j-1 {
 
-		  	return string(runes)
+						runes[i], runes[j] = runes[j], runes[i]
 
-		  }
+					}
 
-		  // 9. Solicite ao usuário uma string e substitua todas as ocorrências de uma letra por outra informada pelo usuário.
+					return string(runes)
 
-		  scanner := bufio.NewScanner(os.Stdin)
+				}
 
-		  fmt.Print("Usuário, digite um texto, por favor: ")
-		  scanner.Scan()
+			// 9. Solicite ao usuário uma string e substitua todas as ocorrências de uma letra por outra informada pelo usuário.
 
-		  str0 := scanner.Text()
+				scanner := bufio.NewScanner(os.Stdin)
 
-		  fmt.Print("Usuário, digite um caractere que quer substituir, por favor: ")
-		  scanner.Scan()
+				fmt.Print("Usuário, digite um texto, por favor: ")
+				scanner.Scan()
 
-		  r := scanner.Text()
+				str0 := scanner.Text()
 
-		  fmt.Print("Usuário, digite um caractere que substituirá o caractere escolhido anteriormente, por favor: ")
-		  scanner.Scan()
+				fmt.Print("Usuário, digite um caractere que quer substituir, por favor: ")
+				scanner.Scan()
 
-		  c := scanner.Text()
+				r := scanner.Text()
 
-		  str1 := strings.ReplaceAll(str0, r, c)
+				fmt.Print("Usuário, digite um caractere que substituirá o caractere escolhido anteriormente, por favor: ")
+				scanner.Scan()
 
-		  fmt.Println(str1)
+				c := scanner.Text()
 
-		  // 10. Escreva um programa que receba duas strings e verifique se elas são anagramas. Informe ao usuário se são ou não.
+				str1 := strings.ReplaceAll(str0, r, c)
 
-		  scanner := bufio.NewScanner(os.Stdin)
+				fmt.Println(str1)
 
-		  fmt.Print("Usuário, digite um texto, por favor: ")
-		  scanner.Scan()
+			// 10. Escreva um programa que receba duas strings e verifique se elas são anagramas. Informe ao usuário se são ou não.
 
-		  str0 := scanner.Text()
+				scanner := bufio.NewScanner(os.Stdin)
 
-		  fmt.Print("Usuário, digite um outro texto, por favor: ")
-		  scanner.Scan()
+				fmt.Print("Usuário, digite um texto, por favor: ")
+				scanner.Scan()
 
-		  str1 := scanner.Text()
+				str0 := scanner.Text()
 
-		  str0 = strings.ToLower(strings.ReplaceAll(str0, " ", ""))
+				fmt.Print("Usuário, digite um outro texto, por favor: ")
+				scanner.Scan()
 
-		  str1 = strings.ToLower(strings.ReplaceAll(str1, " ", ""))
+				str1 := scanner.Text()
 
-		  if len(str0) != len(str1) {
+				str0 = strings.ToLower(strings.ReplaceAll(str0, " ", ""))
 
-		  	fmt.Println("Não são anagramas.")
+				str1 = strings.ToLower(strings.ReplaceAll(str1, " ", ""))
 
-		  	return
+				if len(str0) != len(str1) {
 
-		  }
+					fmt.Println("Não são anagramas.")
 
-		  str0r := []rune(str0)
+					return
 
-		  str1r := []rune(str1)
+				}
 
-		  sort.Slice(str0r, func(i, j int) bool {
+				str0r := []rune(str0)
 
-		  	return str0r[i] < str0r[j]
+				str1r := []rune(str1)
 
-		  })
+				sort.Slice(str0r, func(i, j int) bool {
 
-		  sort.Slice(str1r, func(i, j int) bool {
+					return str0r[i] < str0r[j]
 
-		  	return str1r[i] < str1r[j]
+				} )
 
-		  })
+				sort.Slice(str1r, func(i, j int) bool {
 
-		  str0s := string(str0r)
+					return str1r[i] < str1r[j]
 
-		  str1s := string(str1r)
+				} )
 
-		  if str0s == str1s {
+				str0s := string(str0r)
 
-		  	fmt.Println("São anagramas!")
+				str1s := string(str1r)
 
-		  } else {
+				if str0s == str1s {
 
-		  	fmt.Println("Não são anagramas.")
+					fmt.Println("São anagramas!")
 
-		  }
+				} else {
 
-		  // 11. Escreva um programa que receba uma string e remova todas as vogais. Informe ao usuário o resultado.
+					 fmt.Println("Não são anagramas.")
 
-		  scanner := bufio.NewScanner(os.Stdin)
+				  }
 
-		  fmt.Print("Usuário, digite um texto, por favor: ")
-		  scanner.Scan()
+			// 11. Escreva um programa que receba uma string e remova todas as vogais. Informe ao usuário o resultado.
 
-		  str0 := scanner.Text()
+				scanner := bufio.NewScanner(os.Stdin)
 
-		  vogais := map[string]bool{"a": true, "e": true, "i": true, "o": true, "u": true}
+				fmt.Print("Usuário, digite um texto, por favor: ")
+				scanner.Scan()
 
-		  resultado := strings.Builder{}
+				str0 := scanner.Text()
 
-		  for _, letra := range str0 {
+				vogais := map[string]bool{"a": true, "e": true, "i": true, "o": true, "u": true}
 
-		  	if !vogais[strings.ToLower(string(letra))] {
+				resultado := strings.Builder{}
 
-		  		resultado.WriteRune(letra)
+				for _, letra := range str0 {
 
-		  	}
+					if !vogais[strings.ToLower(string(letra))] {
 
-		  }
+						resultado.WriteRune(letra)
 
-		  fmt.Printf("Resultado: %s\n", resultado.String())
+					}
 
-		  // 12. Escreva um programa que receba uma string e verifique se ela é um palíndromo. Informe ao usuário se é ou não.
+				}
 
-		    func main() {
+				fmt.Printf("Resultado: %s\n", resultado.String())
 
-		    	scanner := bufio.NewScanner(os.Stdin)
+			// 12. Escreva um programa que receba uma string e verifique se ela é um palíndromo. Informe ao usuário se é ou não.
 
-		    	fmt.Print("Usuário, digite um texto, por favor: ")
-		    	scanner.Scan()
+				func main() {
 
-		    	str := scanner.Text()
+					scanner := bufio.NewScanner(os.Stdin)
 
-		    	rts := reverse(str)
+					fmt.Print("Usuário, digite um texto, por favor: ")
+					scanner.Scan()
 
-		    	fmt.Println(rts)
+					str := scanner.Text()
 
-		    	if str == rts {
+					rts := reverse(str)
 
-		    		fmt.Println("É um palíndromo!")
+					fmt.Println(rts)
 
-		    	} else {
+					if str == rts {
 
-		    		fmt.Println("Não é um palíndromo.")
+						fmt.Println("É um palíndromo!")
 
-		    	}
+					} else {
 
-		    }
+						 fmt.Println("Não é um palíndromo.")
 
-		    func reverse(s string) string {
+					  }
 
-		    	runes := []rune(s)
+				}
 
-		    	for i, j := 0, len(runes)-1; i < len(runes)/2; i, j = i+1, j-1 {
+				func reverse(s string) string {
 
-		    		runes[i], runes[j] = runes[j], runes[i]
+					runes := []rune(s)
 
-		    	}
+					for i, j := 0, len(runes)-1; i < len(runes)/2; i, j = i+1, j-1 {
 
-		    	return string(runes)
+						runes[i], runes[j] = runes[j], runes[i]
 
-		    }
+					}
 
-		    // 13. Solicite ao usuário uma string e informe se ela é uma sequência numérica crescente (exemplo: "123" ou "4567").
+					return string(runes)
 
-		    scanner := bufio.NewScanner(os.Stdin)
+				}
 
-		    fmt.Print("Usuário, digite um texto, por favor: ")
-		    scanner.Scan()
+			// 13. Solicite ao usuário uma string e informe se ela é uma sequência numérica crescente (exemplo: "123" ou "4567").
 
-		    str := scanner.Text()
+				scanner := bufio.NewScanner(os.Stdin)
 
-		    nums := strings.Split(str, " ")
+				fmt.Print("Usuário, digite um texto, por favor: ")
+				scanner.Scan()
 
-		    var anterior int
+				str := scanner.Text()
 
-		    atualMaior := true
+				nums := strings.Split(str, " ")
 
-		    for i, numStr := range nums {
+				var anterior int
 
-		    	x, err := strconv.Atoi(numStr)
+				atualMaior := true
 
-		    	if err != nil {
+				for i, numStr := range nums {
 
-		    		fmt.Println("A sequência contém caracteres inválidos.")
+					x, err := strconv.Atoi(numStr)
 
-		    		return
+					if err != nil {
 
-		    	}
+						fmt.Println("A sequência contém caracteres inválidos.")
 
-		    	if i > 0 && x <= anterior {
+						return
 
-		    		atualMaior = false
+					}
 
-		    		break
+					if i > 0 && x <= anterior {
 
-		    	}
+						atualMaior = false
 
-		    	anterior = x
+						break
 
-		    }
+					}
 
-		    if atualMaior {
+					anterior = x
 
-		    	fmt.Println("A sequência é numérica crescente.")
+				}
 
-		    } else {
+				if atualMaior {
 
-		    	fmt.Println("A sequência não é numérica crescente.")
+					fmt.Println("A sequência é numérica crescente.")
 
-		    }
+				} else {
+
+					 fmt.Println("A sequência não é numérica crescente.")
+
+				  }
 
 			// 14. Solicite ao usuário uma string e informe se ela é uma sequência numérica decrescente (exemplo: "987" ou "54321").
 
-			var input string
+				var input string
 
-			fmt.Print("Digite uma sequência numérica: ")
+				fmt.Print("Digite uma sequência numérica: ")
+				fmt.Scan(&input)
 
-			fmt.Scan(&input)
+				prev := -1
 
-			prev := -1
+				for _, c := range input {
 
-			for _, c := range input {
+					num, err := strconv.Atoi(string(c))
 
-				num, err := strconv.Atoi(string(c))
+					if err != nil {
 
-				if err != nil {
+						fmt.Println("A sequência contém caracteres não numéricos!")
 
-					fmt.Println("A sequência contém caracteres não numéricos!")
+						return
 
-					return
+					}
+
+					if num >= prev && prev != -1 {
+
+						fmt.Println("Não é uma sequência numérica decrescente!")
+
+						return
+
+					}
+
+					prev = num
 
 				}
 
-				if num >= prev && prev != -1 {
+				fmt.Println("É uma sequência numérica decrescente!")
 
-					fmt.Println("Não é uma sequência numérica decrescente!")
+			// 15. Solicite ao usuário uma string e substitua todas as vogais por '*' (asterisco).
 
-					return
+				scanner := bufio.NewScanner(os.Stdin)
+
+				fmt.Print("Usuário, digite um texto, por favor: ")
+				scanner.Scan()
+
+				str := scanner.Text()
+
+				str = strings.ReplaceAll(str, "a", "*")
+				str = strings.ReplaceAll(str, "e", "*")
+				str = strings.ReplaceAll(str, "i", "*")
+				str = strings.ReplaceAll(str, "o", "*")
+				str = strings.ReplaceAll(str, "u", "*")
+
+				fmt.Println("String resultante:", str)
+
+			// 16. Solicite ao usuário duas strings e informe se a segunda é uma substring da primeira.
+
+				scanner := bufio.NewScanner(os.Stdin)
+
+				fmt.Print("Usuário, digite um texto, por favor: ")
+				scanner.Scan()
+
+				str0 := scanner.Text()
+
+				fmt.Print("Usuário, digite um outro texto, por favor: ")
+				scanner.Scan()
+
+				str1 := scanner.Text()
+
+				if strings.Contains(str0, str1) {
+
+					fmt.Println("O segundo texto é um sub-texto do primeiro")
+
+				} else {
+
+					 fmt.Println("O segundo texto não é um sub-texto do primeiro")
+
+				  }
+
+			// 17. Solicite ao usuário uma string e imprima somente as suas letras únicas (que aparecem apenas uma vez).
+
+				var str string
+
+				fmt.Print("Digite uma string: ")
+				fmt.Scan(&str)
+
+				freq := make(map[rune]int)
+
+				for _, char := range str {
+
+					freq[char]++
 
 				}
 
-				prev = num
+				fmt.Print("Letras únicas: ")
 
-			}
+				for char, count := range freq {
 
-			fmt.Println("É uma sequência numérica decrescente!")
+					if count == 1 {
 
-	// 15. Solicite ao usuário uma string e substitua todas as vogais por '*' (asterisco).
+						fmt.Printf("%c ", char)
 
-	// 16. Solicite ao usuário duas strings e informe se a segunda é uma substring da primeira.
+					}
 
-	// 17. Solicite ao usuário uma string e imprima somente as suas letras únicas (que aparecem apenas uma vez).
+				}
 
-	// 18. Solicite ao usuário uma string e informe se ela contém somente números (0 a 9).
+			// 18. Solicite ao usuário uma string e informe se ela contém somente números (0 a 9).
 
-	// 19. Solicite ao usuário uma string e imprima a mesma string invertida.
+				var input string
 
-	// 20. Solicite ao usuário uma string e informe se ela é está em camelCase e quantas palavras possuí. CamelCase é quando a primeira letra de cada palavra é maiúscula, e as demais são minúsculas. Exemplo: "estaStringEstaEmCamelCase".
+				fmt.Println("Digite uma string:")
+				fmt.Scanln(&input)
 
-	// Desafio bônus. Escreva um programa que receba uma string e um padrão (outro string) e retorne todos os índices em que o padrão ocorre na string. Informe ao usuário o resultado.
+				isNumber := true
 
-}
+				for _, char := range input {
+
+					_, err := strconv.Atoi(string(char))
+
+					if err != nil {
+
+						isNumber = false
+
+						break
+					}
+
+				}
+
+				if isNumber {
+
+					fmt.Println("A string contém somente números.")
+
+				} else {
+
+					 fmt.Println("A string não contém somente números.")
+				  }
+
+			// 19. Solicite ao usuário uma string e imprima a mesma string invertida.
+
+				func main() {
+
+					scanner := bufio.NewScanner(os.Stdin)
+
+					fmt.Print("Usuário, digite um texto, por favor: ")
+					scanner.Scan()
+
+					str := scanner.Text()
+
+					rts := reverse(str)
+
+					fmt.Println(rts)
+
+				}
+
+				func reverse(s string) string {
+
+					runes := []rune(s)
+
+					for i, j := 0, len(runes)-1; i < len(runes)/2; i, j = i+1, j-1 {
+
+						runes[i], runes[j] = runes[j], runes[i]
+
+					}
+
+					return string(runes)
+
+				}
+
+			// 20. Solicite ao usuário uma string e informe se ela é está em CamelCase e quantas palavras possui. CamelCase é quando a primeira letra de cada palavra é maiúscula, e as demais são minúsculas. Exemplo: "EstaStringEstáEmCamelCase".
+
+				var input string
+
+				fmt.Println("Digite uma string em camelCase:")
+				fmt.Scanln(&input)
+
+				words := 1
+
+				for i, r := range input {
+
+					if i == 0 { // se for a primeira letra da string, verifica se é maiúscula
+
+						if !unicode.IsUpper(r) {
+
+							fmt.Println("A string não está em camelCase.")
+
+							return
+
+						}
+
+						continue
+
+					}
+
+				if unicode.IsSpace(r) { // se encontrar um espaço, conta uma nova palavra
+
+					words++
+
+				} else if !unicode.IsLower(r) { // se encontrar uma letra maiúscula que não seja a primeira, não está em camelCase
+
+					 fmt.Println("A string não está em camelCase.")
+
+					 return
+				  }
+
+				}
+
+				fmt.Printf("A string está em camelCase e possui %d palavras.\n", words)
+
+			// Desafio bônus. Escreva um programa que receba uma string e um padrão (outro string) e retorne todos os índices em que o padrão ocorre na string. Informe ao usuário o resultado.
+
+				var str, pattern string
+
+				fmt.Println("Digite uma string:")
+				fmt.Scanln(&str)
+
+				fmt.Println("Digite um padrão:")
+				fmt.Scanln(&pattern)
+
+				indexes := []int{}
+
+				lastIndex := -1
+
+				for {
+
+					index := strings.Index(str[lastIndex+1:], pattern)
+
+					if index == -1 {
+
+						break
+
+					}
+
+					index += lastIndex + 1
+
+					lastIndex = index
+
+					indexes = append(indexes, index)
+
+				}
+
+				if len(indexes) > 0 {
+
+					fmt.Println("O padrão ocorre nas seguintes posições:", indexes)
+
+				} else {
+
+					 fmt.Println("O padrão não ocorre na string.")
+
+				  }
+
+		}
